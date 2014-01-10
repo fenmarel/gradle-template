@@ -1,10 +1,10 @@
 // Establish version and status
 ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
-group = "com.netflix.${githubProjectName}"
+group = "org.anarres.${githubProjectName}"
 
 buildscript {
     repositories {
-        mavenLocal()
+        // mavenLocal()
         mavenCentral() // maven { url 'http://jcenter.bintray.com' }
     }
     apply from: file('gradle/buildscript.gradle'), to: buildscript 
@@ -12,7 +12,7 @@ buildscript {
 
 allprojects {
     repositories { 
-        mavenLocal()
+        // mavenLocal()
         mavenCentral() // maven { url: 'http://jcenter.bintray.com' }
     }
 }
@@ -21,12 +21,16 @@ apply from: file('gradle/convention.gradle')
 apply from: file('gradle/maven.gradle')
 apply from: file('gradle/check.gradle')
 apply from: file('gradle/license.gradle')
-apply from: file('gradle/release.gradle')
+// apply from: file('gradle/release.gradle')
 
 apply plugin: 'war'
 apply plugin: 'jetty'
 
 dependencies {
+	compile 'com.google.code.findbugs:jsr305:2.0.2'
+
+	testCompile 'junit:junit:4.8.1'
+
     compile 'javax.ws.rs:jsr311-api:1.1.1'
     compile 'com.sun.jersey:jersey-core:1.11'
     compile 'com.sun.jersey:jersey-server:1.11'
