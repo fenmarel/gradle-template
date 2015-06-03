@@ -1,0 +1,12 @@
+// TEMPLATE_TODO: Enter all of your info here.
+
+// Identification info
+ext.developerName = "Jon Skrip"                   // ...your name here
+ext.developerEmail = "jonathan.skrip@gmail.com"   // ...your email here
+ext.githubName = "fenmarel"                       // Put your Github name here
+ext.projectOwner = "Jon Skrip"                    // Change to company name/owner of project
+
+// Project info
+ext.githubProjectName = rootProject.name          // Change if github project name is not the same as the root project's name
+ext.packageRoot = "com.jonathanskrip"             // Change to desired package root
+

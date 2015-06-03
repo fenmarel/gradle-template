@@ -1,3 +1,6 @@
+// Source project info
+apply from: file('gradle/custom.gradle')
+
 // GRADLE-2087 workaround, perform after java plugin
 status = project.hasProperty('preferredStatus')?project.preferredStatus:(version.contains('SNAPSHOT')?'snapshot':'release')
 
@@ -85,7 +88,7 @@ def docTasks = [:]
 }
 
 githubPages {
-    repoUri = "git@github.com:Netflix/${rootProject.githubProjectName}.git"
+    repoUri = "git@github.com:${githubName}/${rootProject.githubProjectName}.git"
     pages {
         docTasks.each { shortName, docTask ->
             from(docTask.outputs.files) {

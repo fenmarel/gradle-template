@@ -1,8 +1,14 @@
 // Executed in context of buildscript
 repositories {
     // Repo in addition to maven central
-    repositories { maven { url 'http://dl.bintray.com/content/netflixoss/external-gradle-plugins/' } } // For gradle-release
+    repositories {
+        maven {
+            // For gradle-release
+            url 'http://dl.bintray.com/content/netflixoss/external-gradle-plugins/'
+        }
+    }
 }
+
 dependencies {
     classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.6.1'
     classpath 'com.mapvine:gradle-cobertura-plugin:0.1'

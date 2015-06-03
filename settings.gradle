@@ -1,2 +1,2 @@
-rootProject.name='gradle-template-multi' // TEMPLATE: Change this
+rootProject.name='gradle-template-multi' // TEMPLATE_TODO: Change this
 include 'template-client','template-server'

@@ -1,5 +1,5 @@
-// Establish version and status
-ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
+// Source project info
+apply from: file('gradle/custom.gradle')
 
 buildscript {
     repositories {
@@ -23,7 +23,7 @@ apply from: file('gradle/license.gradle')
 apply from: file('gradle/release.gradle')
 
 subprojects {
-    group = "com.netflix.${githubProjectName}" // TEMPLATE: Set to organization of project
+    group = "${packageRoot}.${githubProjectName}"
 
     dependencies {
         compile     'javax.ws.rs:jsr311-api:1.1.1'
